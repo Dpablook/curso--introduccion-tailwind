@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/tailwind.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Practica de Tailwind</title>
+    <!-- curso de codigo facilito -->
+  </head>
+  <body>
+    <!-- no hay necesidad de escribir css sino se manaja con las class predetermindadas -->
+
+    <div class="titulo">
+        <h1>Hola</h1>
+    </div>
+    <!-- responsive desing -->
+    <!-- utiliza mobile first -->
+    <!-- las medidas del resposive design tambien esta definidad por clases como en bootstrap -->
+
+    <!-- la clase container es como el contenedor de los elementos -->
+    <!-- se le agrega heigth, background, margin, ect -->
+    <!-- se aplica ademas el responsive -->
+    <div class="container bg-red-400 h-10 lg:mx-auto px-3">
+        <!-- las medidas se manejan con rem -->
+        <h1>Hola</h1>
+    </div>
+
+    <!-- las fuentes -->
+    <!-- el font-zide se maneja con la clase text-numeroxtamaño -->
+    <!-- los tipos de fuentes se pueden cambiar con clases tambien -->
+    <div class="container bg-blue-400 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl">Hola</h1>
+        <h2 class="text-4xl font-serif">Saludos a todos</h2>
+    </div>
+
+    <!-- margin y padding -->
+    <!-- margin con mt, mb, ml, mr -->
+    <!-- tambien se puede usar la m como todos los margenes -->
+    <!-- los pading son con px o py (eje x o eje y) -->
+    <div class="container bg-green-400 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10">Hola</h1>
+        <h2 class="text-4xl mt-2">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>
+
+    <!-- tiene una paleta de color amplia -->
+    <div class="container bg-blue-100 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10">Hola</h1>
+        <h2 class="text-4xl mt-2">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>
+
+    <!-- efecto hover con seudoclases -->
+    <!-- solo agregando la clase hover: y luego lo que queremos modificar -->
+    <!-- para hacerlo en un grupo de elementos tenemos la seudoclase grouphover -->
+    <!-- tambien se puede convinar con el responsive desing agregando lg:hover:ect-->
+    <div class="container bg-red-100 hover:bg-green-200 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10">Hola</h1>
+        <h2 class="text-4xl mt-2">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>
+
+    <!-- border radius -->
+    <!-- es con rounded-seguido de el tamaño (m, l , ect) -->
+    <!-- para que sea todo redondo existe rounded-full -->
+    <div class="container rounded-lg bg-red-800 hover:bg-green-500 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10" >Hola</h1>
+        <h2 class="text-4xl mt-2">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>
+
+    <!-- dark mode -->
+    <!-- hay que activarlo en la configuracion de tailwind -->
+    <!-- es cuando ya esta configurado las app con dark mode -->
+
+    <!-- Grid -->
+    <!-- primero poner la clase grid -->
+    <!-- luego con grd-cold-lugar -->
+    <!-- tambien se puede configurar el gap que seria el espacio vacio que queda -->
+    <!-- esto se hace con la clase gap-numero -->
+     <div class="container grid grid-cold-2 rounded-lg bg-blue-800 hover:bg-red-500 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10">Hola</h1>
+        <h2 class="text-4xl mt-2">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>   
+
+    <!-- animaciones -->
+    <!-- con la clase transform -->
+    <!-- y luego con el tipo de animacion ej: scale-tamaño -->
+    <!-- con las transiciones se usa transition duration-milisegundos-->
+    <!-- tambien se le puede poner delay -->
+    <!-- en cuanto a las animacions ya existen algunas predefinidas en tailwind -->
+    <!-- con la clase animate-nombre de la animacion -->
+    <div class="container rounded-lg bg-green-800 hover:bg-green-500 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10 transform hover:translate-x-2 transition duration-150">Hola</h1>
+        <h2 class="text-4xl mt-2 transform hover:-translate-x-2 transition duration-150 delay-1000">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>
+
+    <!-- flexbox -->
+    <!-- primero la clase flex -->
+    <!-- luego flex-row, flex-col, ect -->
+    <!-- tambien tenemos flex-grow o flex-shrink  para cuando se encoje la pantalla y se adapte-->
+    <!-- aling itens es con items-start, items-end, ect-->
+    <!-- con justify content es con justify-start,justify-end, ect -->
+    <div class="container flex flex-row flex-wrap flex-groud items-center justify-around rounded-lg bg-red-700 hover:bg-green-500 h-15 lg:mx-auto px-3">
+        <h1 class="text-6xl ml-10 transform hover:translate-x-2 transition duration-150">Hola</h1>
+        <h2 class="text-4xl mt-2 transform hover:-translate-x-2 transition duration-150 delay-1000">Saludos a todos</h2>
+        <button class="bg-blue-300 mt-7 px-4 py-2">click</button>
+    </div>
+
+
+    <!-- personalizar temas -->
+    <!-- se agregan estilos -->
+    <!-- no profundisa mucho buscar aparete -->
+    <!-- https://tailwindcss.com/docs/functions-and-directives -->
+    
+
+
+
+
+
+  </body>
+</html>
